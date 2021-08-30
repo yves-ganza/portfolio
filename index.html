@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Yves Ganza</title>
 </head>
 <body>
@@ -25,33 +26,77 @@
             <div id="avatar"></div>
         </section>
         <section id="projects">
-            <h2>My projects</h2>
-            <article> 
-                <h3 class="project-title">Tribute Page</h3>
-                <img src="images/tribute.png" alt="tribute page">
-            </article>
-            <article class="project-title">
-                <h3>Product Landing Page</h3>
-                <img src="/images/landing.png" alt="landing page">
-            </article>
-            <article class="project-title">
-                <h3>Survey Form</h3>
-                <img src="/images/form.png" alt="survey form">
-            </article>
-            <article class="project-title">
-                <h3>Technical documentation website</h3>
-                <div id="tech-doc"></div>
-            </article>
-            <a href="codepen.io">show all ></a>
+            <h2 id="projects-header">My projects</h2>
+            <div class="responsive-grid">
+                <article>
+                    <img src="images/tribute.png" class="thumbnail" alt="tribute page">
+                    <!-- <div class="thumbnail" id="tribute-page"></div> -->
+                    <div class="preview">
+                        <h6 class="project-title">Tribute Page</h6>
+                        <p>Dr. Norman Borlaug tribute page. Part of Freecodecamp's Responsive Web Design Projects</p>
+                    </div>
+                </article>
+                <article> 
+                    <img src="/images/landing.png" class="thumbnail" alt="landing page">
+                    <!-- <div class="thumbnail" id="landing-page"></div> -->
+                    <div class="preview">
+                        <h6  class="project-title">Product Landing Page</h6>
+                        <p>SpaceX's Dragon Spacecraft's landing page. Part of Freecodecamp's Responsive Web Design Projects</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/form.png" class="thumbnail" alt="survey form">
+                    <!-- <div class="thumbnail" id="survey-form"></div> -->
+                    <div class="preview">
+                        <h6 class="project-title">Survey Form</h6>
+                        <p>A simple survey form. Part of Freecodecamp's Responsive Web Design Projects</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/doc_mobile.png" class="thumbnail" alt="technical documentation">
+                    <!-- <div class="thumbnail" id=tech-doc></div> -->
+                    <div class="preview">
+                        <h6 class="project-title">Technical documentation website</h6>
+                    <p>A simple Javascript documentation suitable for beginers. Part of Freecodecamp's Responsive Web Design Projects</p>
+                    </div>
+                </article>                
+            </div>
+
+            <a href="https://codepen.io/lebonganza" id="projects-link" target="__blank">More...</a>
         </section>
         <section id="contact">
             <h2>Let's work together for a better future...</h2>
-            <ul>
-                <li><a href="linkedin.com/in/yves-ganza">Linkedin</a></li>
-                <li><a href="twitter.com/Lebon_YG">Twitter</a></li>
-                <li><a href="github.com/yves-ganza">Github</a></li>
-                <li><a href="mailto:">Send email</a></li>
-                <li><a href="tel:">Call</a></li>
+            <ul id="menu">
+                <li class="menu-item">
+                    <a href="https://twitter.com/lebon_yg">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://linkedin.com/in/yves-ganza">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://github.com/yves-ganza">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://codepen.io/lebonganza">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </li>
             </ul>    
         </section>
     </div>
