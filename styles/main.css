@@ -67,10 +67,13 @@ p {
     list-style: none;
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 2rem;
     position: absolute;
     height: auto;
     top: 80px;
+    left: 0;
     right: 0;
     padding: 2rem 1rem;
     opacity: .8;
@@ -102,6 +105,7 @@ p {
 #nav-menu-toggler:checked ~ #nav-menu {
     display: flex;
 }
+
 
 @media screen and (min-width:900px) {
 
