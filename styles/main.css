@@ -56,6 +56,7 @@ p {
     position: fixed;
     float: left;
     top: 0;
+    z-index: 1;
 }
 
 
@@ -358,47 +359,66 @@ p {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     text-align: center;
+}
+
+#contact h2 {
+    height: 100%;
+    max-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Make a circular navbar for the contact links */
 #menu {
-    display: grid;
-    justify-content: center;
-    list-style: none;
+    height: 100%;
+    max-height: 70vh;
+    position: relative;
 }
 
 .menu-item {
-    height: 80px;
-    width: 80px;
+    list-style: none;
+    height: 3em;
+    width: 3em;
     cursor: pointer;
     position: absolute;
     left: 0;
+    top: 0;
+    bottom: 0;
     right: 0;
     margin: auto;
     background-color: #c1c1c1;
     border-radius: 50%;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item i {
+    height: 100%;
+    width: 100%;
 }
 
 .menu-item:nth-child(1) {
-    transform: rotate(60deg) translateX(-100px);
+    transform: rotate(60deg) translateX(6em);
 }
 .menu-item:nth-child(2) {
-    transform: rotate(120deg) translateX(-100px);
+    transform: rotate(120deg) translateX(6em);
 }
 .menu-item:nth-child(3) {
-    transform: rotate(180deg) translateX(-100px);
+    transform: rotate(180deg) translateX(6em);
 }
 .menu-item:nth-child(4) {
-    transform: rotate(240deg) translateX(-100px);
+    transform: rotate(240deg) translateX(6em);
 }
 .menu-item:nth-child(5) {
-    transform: rotate(300deg) translateX(-100px);
+    transform: rotate(300deg) translateX(6em);
 }
 
 .menu-item:nth-child(6) {
-    transform: rotate(360deg) translateX(-100px);
+    transform: rotate(360deg) translateX(6em);
 }
 
 
@@ -423,8 +443,8 @@ p {
 
 /* Animate link when hovered*/
 .menu-item:hover i {
-    transform: rotate(360deg) scale(2);
-    color: #FCa311;
+    transform: rotate(-360deg) scale(2);
+    color: #fca311;
 }
 
 .menu-item a {
