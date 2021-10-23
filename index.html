@@ -4,122 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Yves Ganza</title>
+    <title>Yves Ganza - Web Development Portfolio</title>
 </head>
 <body>
-    <div class="main">
-        <nav id="nav-bar">
-            <header id="nav-header">@yves-ganza</header>
-            <label for="nav-menu-toggler" class="material-icons" id="nav-menu-icon">menu</label>
-            <input type="checkbox" name="nav-menu-toggler" id="nav-menu-toggler">
-            <ul id="nav-menu">
-                <li> <a href="#welcome-section" class="nav-link"> About</a></li>
-                <li> <a href="#projects" class="nav-link">Projects</a></li>
-                <li> <a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <section id="welcome-section">
-            <div class="title-wrapper">
-                <ul class="subtitle">
-                    <li><span>Hi, I am Yves</span></li>
-                    <li><span>A Web developer</span></li>
+    <div class="background-primary font-mono pb-10 px-1">
+        <header class="w-full font-bold flex flex-col justify-between px-6 lg:px-16 pt-8 lg:pt-12 border-b">
+            <h1 class="text-3xl text-center lg:text-left mb-10">Web development portoflio</h1>
+            <nav id="" class="text-lg mb-2">
+                <ul id="nav-menu" class="text-center lg:flex gap-x-8">
+                    <li class="text-color hover:text-white hover:underline"> <a href="#about" class="">About</a></li>
+                    <li class="text-color hover:text-white hover:underline"> <a href="#projects" class="">Projects</a></li>
+                    <li class="text-color hover:text-white  hover:underline"> <a href="#contact" class="">Contact</a></li>
                 </ul>
-            </div>
-            <div id="avatar"></div>
-        </section>
-        <section id="projects">
-            <h2 id="projects-header">My projects</h2>
-            <div class="responsive-grid">
-                <a href="https://elegant-todo-app.netlify.com" class="article-link" target="__blank">
-                    <article>
-                        <img src="images/todo3.jpg" class="thumbnail" alt="todo list web application">
-                        <!-- <div class="thumbnail" id="todo-app"></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">Todo List Web App</h6>
-                            <p>A fully responsive todo list web application with dark/light theme toggle</p>
-                        </div>
+            </nav>            
+        </header>
+        <main class="w-full">
+            <section id='about' class="pl-6 lg:pl-16 py-16 lg:py-24 border-b">
+                <div class="mb-16">
+                    <h2 class="font-semibold text-xl">Hi, I am Yves!</h2>
+                    <p class="text-lg">I love to solve real world problems with code. I also like to build beautiful and fully responsive web applications!</p>
+                </div>
+                <div class="pr-2">
+                    <article class="mb-6">
+                        <h2 class="underline font-semibold text-xl mb-2">Education</h2>
+                        <p class="text-md">Bachelors of Science in Computer Science at Carleton University (2017-present)</p>
                     </article>
-                </a>
-                <a href="https://spacestagram-one.vercel.app" class="article-link" target="__blank">
-                    <article>
-                        <img src="/images/screenshot_spst.png" class="" alt="SpaceStagram">
-                        <!-- <div class="thumbnail" id="spacestagram"></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">SpaceStagram</h6>
-                            <p>A fully responsive image gallery (Images from NASA's 'apod' API)</p>
-                        </div>
-                    </article>                     
-                </a>
-                <a href="https://priceless-noether-09cba9.netlify.app" class="article-link" target="__blank">
-                    <article> 
-                        <img src="/images/landing.png" class="thumbnail" alt="landing page">
-                        <!-- <div class="thumbnail" id="landing-page"></div> -->
-                        <div class="preview">
-                            <h6  class="project-title">Product Landing Page</h6>
-                            <p>SpaceX's Dragon Spacecraft's landing page.</p>
-                        </div>
-                    </article>                    
-                </a>
-                <a href="https://vibrant-swartz-0533c0.netlify.app" class="article-link" target="__blank">
-                    <article>
-                        <img src="/images/form.png" class="thumbnail" alt="survey form">
-                        <!-- <div class="thumbnail" id="survey-form"></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">Survey Form</h6>
-                            <p>A simple survey form.</p>
-                        </div>
-                    </article>                    
-                </a>
-                <a href="https://zen-bhaskara-304fe3.netlify.app" class="article-link" target="__blank">
-                    <article>
-                        <img src="/images/doc_mobile.png" class="thumbnail" alt="technical documentation">
-                        <!-- <div class="thumbnail" id=tech-doc></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">Technical documentation website</h6>
-                        <p>A simple Javascript documentation suitable for beginers.</div>
-                    </article>                     
-                </a>
-            </div>
-
-            <a href="https://github.com/yves-ganza" id="projects-link" target="__blank">More...</a>
-        </section>
-        <section id="contact">
-            <h2>Let's work together for a better future...</h2>
+                    <article class="mb-6">
+                        <h2 class="underline font-semibold text-xl mb-2">Programming Languages</h2>
+                        <p class="text-md">Javascript, Python</p>
+                    </article>
+                    <article class="mb-6">
+                        <h2 class="underline font-semibold text-xl mb-2">Tech Skills</h2>
+                        <p class="text-md">ReactJS, NextJS, NodeJS, REST APIs, Git</p>
+                    </article>
+                    <article class="mb-6">
+                        <h2 class="underline font-semibold text-xl mb-2">Location</h2>
+                        <p class="text-md">Ottawa, ON Canada</p>
+                    </article>
+                </div>
+            </section>
+            <section id="projects" class="pb-16 px-6 lg:px-16 lg:pb-24 border-b">
+                <h2 class="text-center text-2xl py-5 font-semibold">Projects</h2>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3 justify-center mb-8">
+                    <a href="https://elegant-todo-app.netlify.com" target="__blank">
+                        <article class="w-full max-w-md bg-white shadow rounded">
+                            <img src="images/todo3.jpg" class="thumbnail" alt="todo list web application">
+                            <!-- <div class="thumbnail" id="todo-app"></div> -->
+                            <div class="p-4 bg-white">
+                                <h3 class="text-lg underline font-bold mb-2">Todo List Web App</h3>
+                                <p class="">A fully responsive todo list web application with dark/light theme toggle</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="https://spacestagram-one.vercel.app" target="__blank">
+                        <article class="w-full max-w-md bg-white shadow rounded">
+                            <img src="/images/screenshot_spst.png" alt="SpaceStagram">
+                            <!-- <div class="thumbnail" id="spacestagram"></div> -->
+                            <div class="p-4 bg-white">
+                                <h3 class="text-lg underline font-bold mb-2">SpaceStagram</h3>
+                                <p class="">A fully responsive image gallery (Images from NASA's 'apod' API)</p>
+                            </div>
+                        </article>                     
+                    </a>
+                    <a href="https://zen-bhaskara-304fe3.netlify.app" target="__blank">
+                        <article class="w-full max-w-md bg-white shadow rounded">
+                            <img src="/images/doc_mobile.png" class="thumbnail" alt="technical documentation">
+                            <!-- <div class="thumbnail" id=tech-doc></div> -->
+                            <div class="p-4 bg-white">
+                                <h3 class="text-lg underline font-bold mb-2">Technical documentation website</h3>
+                                <p class="">A simple Javascript documentation suitable for beginers.</p>
+                            </div>
+                        </article>                     
+                    </a>
+                </div>
+                <div class="py-5 text-center">
+                    <a href="https://github.com/yves-ganza" class="text-xl text-blue-500 hover:underline"  target="__blank">More &#8594;</a>
+                </div>
+            </section>
+        </main>
+        <section id="contact" class="py-16 lg:py-24 px-6 lg:px-16 border-b">
+            <h2 class="text-2xl mb-20">Let's work together for a better future...</h2>
             <ul id="menu">
-                <li class="menu-item">
-                    <a href="https://twitter.com/lebon_yg">
-                        <i class="fab fa-twitter"></i>
+                <li class="my-4">
+                    <span class="text-lg lg:text-2xl"><i class="fab fa-twitter"></i> Twitter &#8594;</span>
+                    <a href="https://twitter.com/lebon_yg" class="text-blue-500 text-lg">
+                        @lebon_yg
+                    </a>
+                </li>
+                <li class="my-4">
+                    <span class="text-lg lg:text-2xl"><i class="fab fa-linkedin"></i> Linkedin &#8594;</span>
+                    <a href="https://linkedin.com/in/yves-ganza" class="text-blue-500 text-lg">
+                        @yves-ganza
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://linkedin.com/in/yves-ganza">
-                        <i class="fab fa-linkedin"></i>
+                    <span class="text-lg lg:text-2xl"><i class="fab fa-github"></i> Github &#8594;</span>
+                    <a href="https://github.com/yves-ganza" class="text-blue-500 text-lg">
+                        @yves-ganza
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="https://github.com/yves-ganza">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://codepen.io/lebonganza">
-                        <i class="fab fa-codepen"></i>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="">
-                        <i class="fas fa-phone"></i>
+                <li class="my-4">
+                    <span class="text-lg lg:text-2xl"><i class="fas fa-envelope"></i> Email &#8594;</span>
+                    <a href="mailto:lebonganza@outlook.com" class="text-blue-500 text-lg">
+                        lebonganza@outlook.com
                     </a>
                 </li>
             </ul>    
         </section>
+        <footer class="pt-8 lg:pt-20 pb-40 text-center text-lg"><p>&copy; 2021 yvesganza.me</p></footer>
     </div>
 </body>
 </html>
