@@ -19,3 +19,19 @@ h1, h2, h3, h4, h5, h6 {
 .background-blue {
     background-color: #4661e6;
 }
+
+.height-1\/2 {
+    height: 50vh;
+}
+
+.min-h-3\/4 {
+    min-height: 75vh;
+}
+
+.min-h-1\/2 {
+    min-height: 50vh;
+}
+
+.min-h-1\/4 {
+    min-height: 25vh;
+}
