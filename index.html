@@ -4,122 +4,224 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Yves Ganza</title>
+    <title>Yves Ganza - Portfolio</title>
 </head>
-<body>
-    <div class="main">
-        <nav id="nav-bar">
-            <header id="nav-header">@yves-ganza</header>
-            <label for="nav-menu-toggler" class="material-icons" id="nav-menu-icon">menu</label>
-            <input type="checkbox" name="nav-menu-toggler" id="nav-menu-toggler">
-            <ul id="nav-menu">
-                <li> <a href="#welcome-section" class="nav-link"> About</a></li>
-                <li> <a href="#projects" class="nav-link">Projects</a></li>
-                <li> <a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <section id="welcome-section">
-            <div class="title-wrapper">
-                <ul class="subtitle">
-                    <li><span>Hi, I am Yves</span></li>
-                    <li><span>A Web developer</span></li>
+<body class="font-mono">
+    <header class="dark:bg-gray-800 font-mono bg-white relative overflow-hidden h-screen bg-no-repeat bg-bottom bg-auto">
+        <div class="hidden md:block absolute -bottom-32 -left-32 w-96 h-96">
+            <div class="absolute text-extrabold text-xl right-12 z-20 text-start top-1/4">
+                <span class="text-7xl">
+                    🎨
+                </span>
+                <p>
+                    Got a project ?
+                </p>
+                <a href="#contact" class="underline">
+                    Let&#x27;s talk
+                </a>
+            </div>
+            <svg viewBox="0 0 200 200" class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFDBB9" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.2,74.1,43.2C66.7,57.2,57.6,70.6,45,78.1C32.4,85.6,16.2,87.1,0.7,85.9C-14.8,84.7,-29.6,80.9,-43.9,74.4C-58.3,67.9,-72,58.7,-79.8,45.9C-87.7,33,-89.5,16.5,-88.9,0.3C-88.4,-15.9,-85.4,-31.7,-78.1,-45.4C-70.8,-59.1,-59.1,-70.6,-45.3,-77.9C-31.6,-85.3,-15.8,-88.5,-0.3,-88.1C15.3,-87.6,30.5,-83.5,44.7,-76.4Z" transform="translate(100 100)">
+                </path>
+            </svg>
+        </div>
+        <header class="h-24 sm:h-32 flex items-center z-30 w-full">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="text-gray-800 dark:text-white font-black text-3xl flex items-center">
+                    <svg width="25" height="25" viewBox="0 0 1792 1792" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1664 1504v-768q-32 36-69 66-268 206-426 338-51 43-83 67t-86.5 48.5-102.5 24.5h-2q-48 0-102.5-24.5t-86.5-48.5-83-67q-158-132-426-338-37-30-69-66v768q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm0-1051v-24.5l-.5-13-3-12.5-5.5-9-9-7.5-14-2.5h-1472q-13 0-22.5 9.5t-9.5 22.5q0 168 147 284 193 152 401 317 6 5 35 29.5t46 37.5 44.5 31.5 50.5 27.5 43 9h2q20 0 43-9t50.5-27.5 44.5-31.5 46-37.5 35-29.5q208-165 401-317 54-43 100.5-115.5t46.5-131.5zm128-37v1088q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1472q66 0 113 47t47 113z">
+                        </path>
+                    </svg>
+                    <span class="text-2xl ml-3 mt-1">
+                        @yvesganza
+                    </span>
+                </div>
+                <div class="flex items-center">
+                    <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+                        <a href="#home" class="hover:underline py-2 px-6 flex hover:text-black">
+                            Home
+                        </a>
+                        <a href="#projects" class="py-2 hover:underline px-6 flex hover:text-black">
+                            Projects
+                        </a>
+                        <a href="#skills" class="py-2 px-6 hover:underline flex hover:text-black">
+                            Skills
+                        </a>
+                        <a href="#contact" class="py-2 px-6 flex hover:underline hover:text-black">
+                            Contact
+                        </a>
+                    </nav>
+                    <button class="lg:hidden flex flex-col ml-4">
+                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                        </span>
+                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                        </span>
+                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="h-full flex relative z-20items-center">
+            <div class="container mx-auto px-6 flex flex-col gap-y-8 items-center relative">
+                <p class="text-3xl my-6 text-center dark:text-white">
+                    Hi, I&#x27;m Yves 🤘
+                </p>
+                <h2 class="max-w-3xl text-5xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2">
+                    I build digital products, brands, and experiences.
+                </h2>
+                <div class="flex items-center justify-center mt-4">
+                    <a href="#contact" class="uppercase py-2 my-2 px-4 md:mt-16 bg-transparent dark:text-gray-800 dark:bg-white hover:dark:bg-gray-100 border-2 border-gray-800 text-gray-800 dark:text-white hover:bg-gray-800 hover:text-white text-md">
+                        CONNECT WITH ME
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>  
+    <section id="projects" class="w-full bg-gray-200 py-8 md:pt-16 md:pb-32  px-4 flex flex-col" style="background: #232526; background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #232526, #414345);">
+        <h2 class="text-center text-5xl mb-8  md:mb-24 font-semibold">Some of My Projects</h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center flex-1">
+            <article class="w-full h-full max-w-md bg-white shadow">
+                <img class="w-full h-64" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/phoenx-nfts" class="" alt="technical documentation">
+                <div class="p-4 bg-white flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-bold mb-2">NFT Marketplace</h3>
+                    <p class="text-center text-lg my-4">Join a blockchain network and create one of your first digital assets</p>
+                    <div class="flex justify-center gap-4 my-4">
+                        <a href="http://nft-marketplace-murex.vercel.app/" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Demo</a>
+                        <a href="http://github.com/yves-ganza/nft-marketplace" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Source Code</a>
+                    </div>
+                </div>
+            </article>
+            <article class="w-full h-full max-w-md bg-white shadow">
+                <img class="w-full h-64" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/spacestagram" alt="SpaceStagram">
+                <div class="p-4 bg-white flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-bold mb-2">SpaceStagram</h3>
+                    <p class="text-center text-lg my-4">A fully responsive image gallery (Images from NASA's 'apod' API)</p>
+                    <div class="flex justify-center gap-4 my-4">
+                        <a href="http://spacestagram-one.vercel.app/" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Demo</a>
+                        <a href="http://github.com/yves-ganza/spacestagram" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Source Code</a>
+                    </div>
+                </div>
+            </article>                                          
+            <article class="w-full h-full max-w-md bg-white shadow">
+                <img class="w-full h-64" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/todo-app" class="thumbnail" alt="todo list web application">
+                <div class="p-4 bg-white flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-bold mb-2">Todo List Web App</h3>
+                    <p class="text-center text-lg my-4">A fully responsive todo list web application with dark/light theme toggle</p>
+                    <div class="flex justify-center gap-4 my-4">
+                        <a href="https://elegant-todo-app.netlify.app/" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Demo</a>
+                        <a href="http://github.com/yves-ganza/todo-app" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Source Code</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="skills" class="text-center py-8 md:pt-16 md:pb-32">
+        <h2 class="text-center text-5xl mb-8  md:mb-24 font-semibold">Skills</h2>
+        <div class="flex flex-col gap-y-12 lg:gap-y-4 px-16 lg:flex-row lg:justify-between">
+            <article id="frontend">
+                <h3 class="text-4xl mb-12 lg:mb-24">Front End Technologies</h3>
+                <ul class="grid place-items-center gap-y-16">
+                    <li>
+                        <img class="w-16 h-16 mx-auto" src="assets/html-5.svg" alt="html">
+                        <p class="text-2xl mt-4">HTML</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/css-3.svg" alt="css">
+                        <p class="text-2xl mt-4">CSS</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/javascript.svg" alt="js">
+                        <p class="text-2xl mt-4">Javascript</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/react.svg" alt="react">
+                        <p class="text-2xl mt-4">React.js</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/tailwindcss-icon.svg" alt="twcss">
+                        <p class="text-2xl mt-4">Tailwindcss</p>
+                    </li>
                 </ul>
-            </div>
-            <div id="avatar"></div>
-        </section>
-        <section id="projects">
-            <h2 id="projects-header">My projects</h2>
-            <div class="responsive-grid">
-                <a href="https://elegant-todo-app.netlify.com" class="article-link" target="__blank">
-                    <article>
-                        <img src="images/todo3.jpg" class="thumbnail" alt="todo list web application">
-                        <!-- <div class="thumbnail" id="todo-app"></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">Todo List Web App</h6>
-                            <p>A fully responsive todo list web application with dark/light theme toggle</p>
-                        </div>
-                    </article>
-                </a>
-                <a href="https://spacestagram-one.vercel.app" class="article-link" target="__blank">
-                    <article>
-                        <img src="/images/screenshot_spst.png" class="" alt="SpaceStagram">
-                        <!-- <div class="thumbnail" id="spacestagram"></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">SpaceStagram</h6>
-                            <p>A fully responsive image gallery (Images from NASA's 'apod' API)</p>
-                        </div>
-                    </article>                     
-                </a>
-                <a href="https://priceless-noether-09cba9.netlify.app" class="article-link" target="__blank">
-                    <article> 
-                        <img src="/images/landing.png" class="thumbnail" alt="landing page">
-                        <!-- <div class="thumbnail" id="landing-page"></div> -->
-                        <div class="preview">
-                            <h6  class="project-title">Product Landing Page</h6>
-                            <p>SpaceX's Dragon Spacecraft's landing page.</p>
-                        </div>
-                    </article>                    
-                </a>
-                <a href="https://vibrant-swartz-0533c0.netlify.app" class="article-link" target="__blank">
-                    <article>
-                        <img src="/images/form.png" class="thumbnail" alt="survey form">
-                        <!-- <div class="thumbnail" id="survey-form"></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">Survey Form</h6>
-                            <p>A simple survey form.</p>
-                        </div>
-                    </article>                    
-                </a>
-                <a href="https://zen-bhaskara-304fe3.netlify.app" class="article-link" target="__blank">
-                    <article>
-                        <img src="/images/doc_mobile.png" class="thumbnail" alt="technical documentation">
-                        <!-- <div class="thumbnail" id=tech-doc></div> -->
-                        <div class="preview">
-                            <h6 class="project-title">Technical documentation website</h6>
-                        <p>A simple Javascript documentation suitable for beginers.</div>
-                    </article>                     
-                </a>
-            </div>
-
-            <a href="https://github.com/yves-ganza" id="projects-link" target="__blank">More...</a>
-        </section>
-        <section id="contact">
-            <h2>Let's work together for a better future...</h2>
-            <ul id="menu">
-                <li class="menu-item">
-                    <a href="https://twitter.com/lebon_yg">
-                        <i class="fab fa-twitter"></i>
+            </article>
+            <article id="backend">
+                <h3 class="text-4xl mb-12 lg:mb-24">Back End Technologies</h3>
+                <ul class="grid place-items-center gap-y-16">
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/nodejs-icon.svg" alt="nodejs">
+                        <p class="text-2xl mt-4">Node.js</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/express.svg" alt="expressjs">
+                        <p class="text-2xl mt-2">Express.js</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/python.svg" alt="python">
+                        <p class="text-2xl mt-4">Python</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/ethereum.svg" alt="eth">
+                        <p class="text-2xl mt-4">Ethereum</p>
+                    </li>
+                </ul>
+            </article>
+            <article id="other">
+                <h3 class="text-4xl mb-12 mb-24">Other Technologies</h3>
+                <ul class="grid place-items-center gap-y-16">
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/git-icon.svg" alt="git">
+                        <p class="text-2xl mt-4">Git</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/github-octocat.svg" alt="github">
+                        <p class="text-2xl mt-4">Github</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/google-cloud.svg" alt="gcp">
+                        <p class="text-2xl mt-4">Google Cloud</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/mongodb.svg" alt="mongodb">
+                        <p class="text-2xl mt-2">MongoDB</p>
+                    </li>
+                    <li >
+                        <img class="w-16 h-16 mx-auto" src="assets/nextjs.svg" alt="nextjs">
+                        <p class="text-2xl mt-2">Next.js</p>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+    <section id="contact" class="py-8  md:py-24 bg-gray-200 bg-no-repeat bg-bottom lg:bg-right bg-contain" style="background-image: url('/assets/taxi-robot.png');  background: #232526; background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #232526, #414345);">
+        <article class="flex flex-col items-center">
+            <h2 class="text-center text-5xl font-semibold my-8 md:mb-24">Contact</h2>
+            <ul class="flex-1 grid place-content-center place-items-center w-full gap-x-4 gap-y-8 items-center">
+                <li class="shadow-lg rounded-full p-8 cursor-pointer" title="linkedin" aria-details="linkedin">
+                    <a href="https://linkedin.com/in/yves-ganza" target="_blank">
+                        <img class="h-32 w-32" src="assets/linkedin-icon.svg" alt="twitter">
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="https://linkedin.com/in/yves-ganza">
-                        <i class="fab fa-linkedin"></i>
+                <li class="shadow-lg rounded-full p-8 cursor-pointer" title="github">
+                    <a href="https://github.com/yves-ganza" target="_blank">
+                        <img class="h-32 w-32" src="assets/github-octocat.svg" alt="twitter">
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="https://github.com/yves-ganza">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://codepen.io/lebonganza">
-                        <i class="fab fa-codepen"></i>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="">
-                        <i class="fas fa-phone"></i>
+                <li class="shadow-lg rounded-full p-8 cursor-pointer" title="twitter">
+                    <a href="https://twitter.com/lebon_yg" target="_blank">
+                        <img class="h-32 w-32" src="assets/twitter.svg" alt="twitter">
                     </a>
                 </li>
             </ul>    
-        </section>
-    </div>
+        </article>
+    </section>
+    <footer class="py-8 lg:py-20 text-center flex flex-col justify-center items-center text-2xl">
+        <p>&copy; 2021 - All rights reserved.</p>
+        <img class="max-w-64 max-h-64 pt-12" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/main-logo.png" alt=" ">
+    </footer>
 </body>
 </html>
