@@ -2,6 +2,10 @@ const goUpButton = document.getElementById('goUp')
 const navToggler = document.getElementById('nav-toggler')
 const responsiveNav = document.getElementById('responsive-nav')
 
+const copyright = `&copy; ${new Date().getFullYear()} - All rights reserved.`
+
+document.getElementById('copyright').innerHTML = copyright
+
 
 navToggler.onclick = (e) => {
     e.stopPropagation()
