@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Yves Ganza - Portfolio</title>
 </head>
-<body class="font-mono">
+<body class="font-mono relative transition-all">
     <header class="dark:bg-gray-800 font-mono bg-white relative overflow-hidden h-screen bg-no-repeat bg-bottom bg-auto">
         <div class="hidden md:block absolute -bottom-32 -left-32 w-96 h-96">
             <div class="absolute text-extrabold text-xl right-12 z-20 text-start top-1/4">
@@ -54,13 +54,8 @@
                             Contact
                         </a>
                     </nav>
-                    <button class="lg:hidden flex flex-col ml-4">
-                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
-                        </span>
-                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
-                        </span>
-                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
-                        </span>
+                    <button id="nav-toggler" class="text-3xl lg:hidden ml-4 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </button>
                 </div>
             </div>
@@ -84,8 +79,8 @@
     <section id="projects" class="w-full bg-gray-200 py-8 md:pt-16 md:pb-32  px-4 flex flex-col" style="background: #232526; background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #232526, #414345);">
         <h2 class="text-center text-5xl mb-8  md:mb-24 font-semibold">Some of My Projects</h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center flex-1">
-            <article class="w-full h-full max-w-md bg-white shadow">
+        <div class="flex flex-col items-center lg:flex-row gap-4 lg:justify-center lg:items-baseline">
+            <article class="w-full max-w-md bg-white shadow">
                 <img class="w-full h-64" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/phoenx-nfts" class="" alt="technical documentation">
                 <div class="p-4 bg-white flex flex-col justify-center items-center">
                     <h3 class="text-2xl font-bold mb-2">NFT Marketplace</h3>
@@ -96,7 +91,7 @@
                     </div>
                 </div>
             </article>
-            <article class="w-full h-full max-w-md bg-white shadow">
+            <article class="w-full max-w-md bg-white shadow">
                 <img class="w-full h-64" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/spacestagram" alt="SpaceStagram">
                 <div class="p-4 bg-white flex flex-col justify-center items-center">
                     <h3 class="text-2xl font-bold mb-2">SpaceStagram</h3>
@@ -107,11 +102,11 @@
                     </div>
                 </div>
             </article>                                          
-            <article class="w-full h-full max-w-md bg-white shadow">
+            <article class="w-full max-w-md bg-white shadow">
                 <img class="w-full h-64" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/todo-app" class="thumbnail" alt="todo list web application">
                 <div class="p-4 bg-white flex flex-col justify-center items-center">
                     <h3 class="text-2xl font-bold mb-2">Todo List Web App</h3>
-                    <p class="text-center text-lg my-4">A fully responsive todo list web application with dark/light theme toggle</p>
+                    <p class="text-center text-lg my-4">A fully responsive todo list web app with dark/light theme toggle</p>
                     <div class="flex justify-center gap-4 my-4">
                         <a href="https://elegant-todo-app.netlify.app/" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Demo</a>
                         <a href="http://github.com/yves-ganza/todo-app" target="_blank" class="border rounded-xl px-6 py-4" rel="noopener noreferrer">Source Code</a>
@@ -128,23 +123,23 @@
                 <ul class="grid place-items-center gap-y-16">
                     <li>
                         <img class="w-16 h-16 mx-auto" src="assets/html-5.svg" alt="html">
-                        <p class="text-2xl mt-4">HTML</p>
+                        <p class="text-xl mt-4">HTML</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/css-3.svg" alt="css">
-                        <p class="text-2xl mt-4">CSS</p>
+                        <p class="text-xl mt-4">CSS</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/javascript.svg" alt="js">
-                        <p class="text-2xl mt-4">Javascript</p>
+                        <p class="text-xl mt-4">Javascript</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/react.svg" alt="react">
-                        <p class="text-2xl mt-4">React.js</p>
+                        <p class="text-xl mt-4">React.js</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/tailwindcss-icon.svg" alt="twcss">
-                        <p class="text-2xl mt-4">Tailwindcss</p>
+                        <p class="text-xl mt-4">Tailwindcss</p>
                     </li>
                 </ul>
             </article>
@@ -153,19 +148,19 @@
                 <ul class="grid place-items-center gap-y-16">
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/nodejs-icon.svg" alt="nodejs">
-                        <p class="text-2xl mt-4">Node.js</p>
+                        <p class="text-xl mt-4">Node.js</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/express.svg" alt="expressjs">
-                        <p class="text-2xl mt-2">Express.js</p>
+                        <p class="text-xl mt-2">Express.js</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/python.svg" alt="python">
-                        <p class="text-2xl mt-4">Python</p>
+                        <p class="text-xl mt-4">Python</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/ethereum.svg" alt="eth">
-                        <p class="text-2xl mt-4">Ethereum</p>
+                        <p class="text-xl mt-4">Ethereum</p>
                     </li>
                 </ul>
             </article>
@@ -174,23 +169,23 @@
                 <ul class="grid place-items-center gap-y-16">
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/git-icon.svg" alt="git">
-                        <p class="text-2xl mt-4">Git</p>
+                        <p class="text-xl mt-4">Git</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/github-octocat.svg" alt="github">
-                        <p class="text-2xl mt-4">Github</p>
+                        <p class="text-xl mt-4">Github</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/google-cloud.svg" alt="gcp">
-                        <p class="text-2xl mt-4">Google Cloud</p>
+                        <p class="text-xl mt-4">Google Cloud</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/mongodb.svg" alt="mongodb">
-                        <p class="text-2xl mt-2">MongoDB</p>
+                        <p class="text-xl mt-2">MongoDB</p>
                     </li>
                     <li >
                         <img class="w-16 h-16 mx-auto" src="assets/nextjs.svg" alt="nextjs">
-                        <p class="text-2xl mt-2">Next.js</p>
+                        <p class="text-xl mt-2">Next.js</p>
                     </li>
                 </ul>
             </article>
@@ -200,20 +195,20 @@
     background: linear-gradient(to right, #232526, #414345);">
         <article class="flex flex-col items-center">
             <h2 class="text-center text-5xl font-semibold my-8 md:mb-24">Contact</h2>
-            <ul class="flex-1 grid place-content-center place-items-center w-full gap-x-4 gap-y-8 items-center">
-                <li class="shadow-lg rounded-full p-8 cursor-pointer" title="linkedin" aria-details="linkedin">
+            <ul class="flex-1 flex flex-col justify-between items-center w-full gap-x-4 gap-y-8 items-center">
+                <li class="h-32 w-32 shadow-lg rounded-full p-8 cursor-pointer" title="linkedin" aria-details="linkedin">
                     <a href="https://linkedin.com/in/yves-ganza" target="_blank">
-                        <img class="h-32 w-32" src="assets/linkedin-icon.svg" alt="twitter">
+                        <img class="w-full h-full" src="assets/linkedin-icon.svg" alt="twitter">
                     </a>
                 </li>
-                <li class="shadow-lg rounded-full p-8 cursor-pointer" title="github">
+                <li class="h-32 w-32 shadow-lg rounded-full p-8 cursor-pointer" title="github">
                     <a href="https://github.com/yves-ganza" target="_blank">
-                        <img class="h-32 w-32" src="assets/github-octocat.svg" alt="twitter">
+                        <img class="w-full h-full" src="assets/github-octocat.svg" alt="twitter">
                     </a>
                 </li>
-                <li class="shadow-lg rounded-full p-8 cursor-pointer" title="twitter">
+                <li class="shadow-lg h-32 w-32 rounded-full p-8 cursor-pointer" title="twitter">
                     <a href="https://twitter.com/lebon_yg" target="_blank">
-                        <img class="h-32 w-32" src="assets/twitter.svg" alt="twitter">
+                        <img class="w-full h-full" src="assets/twitter.svg" alt="twitter">
                     </a>
                 </li>
             </ul>    
@@ -223,5 +218,23 @@
         <p>&copy; 2021 - All rights reserved.</p>
         <img class="max-w-64 max-h-64 pt-12" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/main-logo.png" alt=" ">
     </footer>
+    <button id="goUp" class="bg-gray-900 p-4 rounded fixed bottom-12 right-12">
+        <i class="fas fa-arrow-up text-white"></i>
+    </button>
+    <nav id="responsive-nav" class="transition py-16 pl-4 bg-gray-800  text-white uppercase text-lg  items-center absolute -right-full top-32 ">
+        <a href="#home" class="hover:underline py-2 px-6 flex hover:text-black">
+            Home
+        </a>
+        <a href="#projects" class="py-2 hover:underline px-6 flex hover:text-black">
+            Projects
+        </a>
+        <a href="#skills" class="py-2 px-6 hover:underline flex hover:text-black">
+            Skills
+        </a>
+        <a href="#contact" class="py-2 px-6 flex hover:underline hover:text-black">
+            Contact
+        </a>
+    </nav>
+    <script src="app.js" defer></script>
 </body>
 </html>
