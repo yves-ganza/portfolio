@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Yves Ganza - Portfolio</title>
 </head>
-<body class="font-mono relative transition-all overflow-x-hidden">
+<body class="font-mono relative transition-all">
     <header class="dark:bg-gray-800 font-mono bg-white relative overflow-hidden h-screen bg-no-repeat bg-bottom bg-auto">
         <div class="hidden md:block absolute -bottom-32 -left-32 w-96 h-96">
-            <div class="absolute text-extrabold text-xl right-12 z-20 text-start top-1/4">
+            <div class="absolute text-extrabold text-xl right-12 z-30 text-start top-1/4">
                 <span class="text-7xl">
                     🎨
                 </span>
@@ -40,7 +40,7 @@
                     </span>
                 </div>
                 <div class="flex items-center">
-                    <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+                    <nav class="text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
                         <a href="#home" class="hover:underline py-2 px-6 flex hover:text-black">
                             Home
                         </a>
@@ -54,19 +54,58 @@
                             Contact
                         </a>
                     </nav>
-                    <button id="nav-toggler" class="text-3xl lg:hidden ml-4 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    <button id="nav-toggler" class="text-3xl w-full flex items-center justify-center lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="flat" stroke-linejoin="flat"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </button>
                 </div>
             </div>
+            <div id="responsive-nav" class="fixed w-full left-0 top-0 bottom-0 grid z-30 hidden transition duration-500 ease-in-out bg-gradient-to-l from-gray-900 via-gray-300 lg:hidden" style="grid-template-columns: 1fr minmax(200px, 25%);">
+                <div id="toggle-util" class=""></div>
+                <div class="pt-12 text-white">                            
+                    <button id="close-nav" class="w-full flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                    <nav class="uppercase text-lg  grid gap-y-8 mt-24 ">
+                        <a href="#home" class="hover:underline px-6 flex py-2 gap-x-8 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            <span>
+                                Home
+                            </span>
+                        </a>
+                        <a href="#projects" class="py-2 px-6 hover:underline flex gap-x-8 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                            </svg>
+                            <span>
+                                Projects
+                            </span>
+                        </a>
+                        <a href="#skills" class="py-2 px-6 hover:underline flex gap-x-8 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                            <span>Skills</span>   
+                        </a>
+                        <a href="#contact" class="py-2 px-6 hover:underline flex gap-x-8 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>Contact</span>  
+                        </a>
+                    </nav>
+                </div>
+            </div>
         </header>
-        <div class="h-full flex relative z-20items-center">
+        <div class="h-full flex relative z-20">
             <div class="container mx-auto px-6 flex flex-col gap-y-8 items-center relative">
                 <p class="text-3xl my-6 text-center dark:text-white">
                     Hi, I&#x27;m Yves 🤘
                 </p>
                 <h2 class="max-w-3xl text-5xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2">
-                    I build digital products, brands, and experiences.
+                    A Frontend Engineer.
                 </h2>
                 <div class="flex items-center justify-center mt-4">
                     <a href="#contact" class="uppercase py-2 my-2 px-4 md:mt-16 bg-transparent dark:text-gray-800 dark:bg-white hover:dark:bg-gray-100 border-2 border-gray-800 text-gray-800 dark:text-white hover:bg-gray-800 hover:text-white text-md">
@@ -218,23 +257,9 @@
         <p id="copyright"></p>
         <img class="max-w-64 max-h-64 pt-12" src="https://portfolio-assets-01.s3.us-east-2.amazonaws.com/main-logo.png" alt=" ">
     </footer>
-    <button id="goUp" class="bg-gray-900 p-4 rounded fixed bottom-12 right-12">
-        <i class="fas fa-arrow-up text-white"></i>
+    <button id="go-to-top" class="bg-gray-900 p-4 rounded fixed bottom-12 right-12 hidden hover:block">
+        <i class="fas fa-arrow-up text-white animate-bounce"></i>
     </button>
-    <nav id="responsive-nav" class="transition py-16 pl-4 bg-gray-800  text-white uppercase text-lg  items-center absolute -right-full top-32 ">
-        <a href="#home" class="hover:underline py-2 px-6 flex hover:text-black">
-            Home
-        </a>
-        <a href="#projects" class="py-2 hover:underline px-6 flex hover:text-black">
-            Projects
-        </a>
-        <a href="#skills" class="py-2 px-6 hover:underline flex hover:text-black">
-            Skills
-        </a>
-        <a href="#contact" class="py-2 px-6 flex hover:underline hover:text-black">
-            Contact
-        </a>
-    </nav>
     <script src="app.js" defer></script>
 </body>
 </html>
