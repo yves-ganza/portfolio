@@ -1,6 +1,8 @@
-const goUpButton = document.getElementById('goUp')
+const goTopBtn = document.getElementById('go-to-top')
 const navToggler = document.getElementById('nav-toggler')
+const closeNavBtn = document.getElementById('close-nav')
 const responsiveNav = document.getElementById('responsive-nav')
+const toggleUtil = document.getElementById('toggle-util')
 
 const copyright = `&copy; ${new Date().getFullYear()} - All rights reserved.`
 
@@ -9,17 +11,27 @@ document.getElementById('copyright').innerHTML = copyright
 
 navToggler.onclick = (e) => {
     e.stopPropagation()
-    let list = responsiveNav.classList
-    list.contains('-right-full') ? 
-    list.replace('-right-full', 'right-0') : 
-        list.replace('right-0', '-right-full')
+    responsiveNav.classList.toggle('hidden')
+}
+
+closeNavBtn.onclick = (e) => {
+    e.stopPropagation()
+    responsiveNav.classList.toggle('hidden')
 }
 
 document.body.onclick = (e) => {
-    let list = responsiveNav.classList
-    list.contains('right-0') ? list.replace('right-0', '-right-full') : ''
+    !responsiveNav.classList.contains('hidden') && responsiveNav.classList.add('hidden')
 }
 
-goUpButton.onclick = () => {
+goTopBtn.onclick = () => {
     window.scrollTo(0,0)
+}
+
+window.onscroll = () => {
+    if(window.scrollY > window.screen.height){
+        goTopBtn.classList.contains('hidden') && goTopBtn.classList.remove('hidden')
+    }
+    else{
+        !goTopBtn.classList.contains('hidden') && goTopBtn.classList.add('hidden')
+    }
 }
