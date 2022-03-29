@@ -7,5 +7,5 @@ Technologies used:
   - HTML
   - CSS
   - Javascript
-  -TailwindCSS
+  - TailwindCSS
   
